@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Casino REX</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>🎡 Казино REX</h2>
+
+<div id="balance">💰 Баланс смотри в боте</div>
+
+<div class="wheel-wrapper">
+  <div class="pointer">🔻</div>
+  <div id="wheel">
+    <span class="sector s1">❌ x0</span>
+    <span class="sector s2">🙂 x1</span>
+    <span class="sector s3">🔥 x1.5</span>
+    <span class="sector s4">💎 x2</span>
+    <span class="sector s5">👑 x10</span>
+  </div>
+</div>
+
+<input id="bet" type="number" placeholder="Ставка от 400">
+<button onclick="spin()">🎰 Крутить</button>
+
+<p id="result"></p>
+
+<audio id="spinSound" src="spin.mp3"></audio>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="wheel.js"></script>
+</body>
+</html>

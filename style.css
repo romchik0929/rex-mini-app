@@ -1,0 +1,79 @@
+body {
+  background: #0f0f0f;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.wheel-wrapper {
+  position: relative;
+  width: 300px;
+  margin: 20px auto;
+}
+
+#wheel {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 8px solid gold;
+  position: relative;
+  background: conic-gradient(
+    #ff4d4d 0deg 72deg,
+    #6c7cff 72deg 144deg,
+    #4dff88 144deg 216deg,
+    #ffd24d 216deg 288deg,
+    #ff7b00 288deg 360deg
+  );
+}
+
+.pointer {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  z-index: 10;
+}
+
+.sector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: bold;
+  transform-origin: 0 0;
+}
+
+.s1 { transform: rotate(36deg) translate(20px, -120px); }
+.s2 { transform: rotate(108deg) translate(20px, -120px); }
+.s3 { transform: rotate(180deg) translate(20px, -120px); }
+.s4 { transform: rotate(252deg) translate(20px, -120px); }
+.s5 { transform: rotate(324deg) translate(20px, -120px); }
+
+.sector.win {
+  color: yellow;
+  text-shadow: 0 0 15px gold;
+}
+
+button {
+  margin-top: 15px;
+  padding: 14px 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, gold, orange);
+}
+
+#result {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+/* Анимация x10 */
+body.win-x10 {
+  animation: flash 0.3s infinite alternate;
+}
+
+@keyframes flash {
+  from { background: #0f0f0f; }
+  to { background: #2a1f00; }
+}
